@@ -1,0 +1,7 @@
+#sed function to search for organism name based on a file of organism names and replace with italicized version in the endnote XML file.
+while read -r j ; do
+
+VAR="$j"
+sed -i "" "s+$VAR+<style face=\"italic\" font=\"default\" size=\"100%\">$VAR</style>+gI" MyEndNoteLibrary.xml
+echo $VAR
+done < ~/Desktop/species.txt
