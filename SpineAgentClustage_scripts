@@ -1,0 +1,11 @@
+#Spine
+perl /Users/traviskochan/Downloads/Spine-master/spine.pl -f /Users/traviskochan/Desktop/Assemblies/spine/files.txt -m /Users/traviskochan/Downloads/mummer-4.0.0rc1 -t 8 -a 95
+
+
+#AGEnt
+for i in /Users/traviskochan/Desktop/Assemblies/*.gb ; do filename=$(basename -- "$i");
+filename_no_extension="${filename%.*}";
+perl /Users/traviskochan/Downloads/AGEnt-master/AGEnt.pl  -r /Users/traviskochan/Desktop/Assemblies/Spine/output.backbone.fasta  -n /Users/traviskochan/Downloads/mummer-4.0.0rc1 -q $i -p $filename_no_extension; done
+
+#Clustage
+perl /Users/traviskochan/Downloads/ClustAGE.osx.v0.8/ClustAGE.pl -f /Users/traviskochan/Desktop/Assemblies/Clustage/hmv/Clustage_files.txt
