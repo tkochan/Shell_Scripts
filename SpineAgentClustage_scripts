@@ -9,3 +9,6 @@ perl /Users/traviskochan/Downloads/AGEnt-master/AGEnt.pl  -r /Users/traviskochan
 
 #Clustage
 perl /Users/traviskochan/Downloads/ClustAGE.osx.v0.8/ClustAGE.pl -f /Users/traviskochan/Desktop/Assemblies/Clustage/hmv/Clustage_files.txt
+
+#Clustage filter out by variables by size and things that have perfect correlation with one another
+perl /Users/travis.kochan/Desktop/Applications/ClustAGE.osx.v0.8/utilities/csv_filter.pl -c 100 -h /Users/travis.kochan/Desktop/HMV/ClustAGE/rerank.subelements.csv /Users/travis.kochan/Desktop/HMV/ClustAGE/rerank.subelements.key.txt > new.csv
